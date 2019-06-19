@@ -6,13 +6,15 @@ import "font-awesome/css/font-awesome.css";
 
 import "./styles/styles.scss";
 import ListContainer from 'Containers/ListContainer';
+import DetailContainer from 'Containers/DetailContainer';
 
 export default class App extends React.Component<any, any> {
   public render() {
     return (
         <BrowserRouter>
           <Switch>
-            <Route path="/" render={(props) => (<ListContainer {...props} />)} />
+            <Route exact={true} strict={true} path="/" render={(props) => (<ListContainer {...props} />)} />
+            <Route path="/detail/:articleId" render={(props) => (<DetailContainer {...props} />)} />
             <Route component={render => (<div>no data </div>)} />
           </Switch>
         </BrowserRouter>

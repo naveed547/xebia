@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { v4 as uuid } from 'uuid';
 import Pagination from '../Pagination';
+import { Link } from "react-router-dom";
 
 import {ListTableProps} from './ListTable.props';
 import {ListTableState} from './ListTable.state';
@@ -19,6 +20,14 @@ class ListTable extends React.PureComponent<ListTableProps, ListTableState> {
         // update state with new page of items
         this.setState({ pageOfItems });
 	}
+	public truncString(str) {
+		const length = 200;
+		return str && str.length > length ? str.substring(0, length)+'...' : str;
+	}
+	public checkKey(str) {
+		const keys = ['nyt://article/', 'nyt://interactive/'];
+		return str.indexOf(keys[0]) !== -1 ? keys[0] : keys[1];
+	}
 	public render() {
 		return (
 			<React.Fragment>
@@ -27,9 +36,14 @@ class ListTable extends React.PureComponent<ListTableProps, ListTableState> {
 						return (
 							<div key={`article${uuid()}`.replace(/-/g, '')} className="article">
 								<img src="" alt="" className="article-image" />
-								<a className="article-content" href={article.web_url} target="_blank">
+								<Link className="article-content" to={{
+									pathname: `/detail/${article._id.split(this.checkKey(article._id))[1]}`,
+									state: {
+										article: JSON.stringify(article)
+									}
+								}}>
 									<p className="article-abstract">
-										{article.abstract}
+										{this.truncString(article.abstract)}
 									</p>
 									<p className="article-from">
 										<span className="by">{article.byline.original}</span>
@@ -40,7 +54,7 @@ class ListTable extends React.PureComponent<ListTableProps, ListTableState> {
 											</span>
 										)}
 									</p>
-								</a>
+								</Link>
 								<i className="fa fa-chevron-right"></i>
 							</div>
 						)

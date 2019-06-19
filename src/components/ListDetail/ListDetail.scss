@@ -1,0 +1,22 @@
+.article {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    &-image {
+        margin-left: 20px;
+    }
+    &-description {
+       flex-grow: 1; 
+    }
+    &-from {
+        display: flex;
+        opacity: 0.5;
+        span {
+            margin-bottom: 15px;
+            &.by {
+                flex-grow: 1;
+            }
+        }
+    }
+}
+
