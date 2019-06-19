@@ -1,0 +1,20 @@
+.transaction-container {
+    .table-row {
+        display: flex;
+        > div {
+            flex: 1;
+            text-align: center;
+            border: 1px solid #000;
+            word-break: break-all;
+            padding: 10px;
+            &:not(:last-child) {
+                border-right: 0;
+            }
+        }
+        &:not(:last-child) {
+            > div {
+                border-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "module": "commonjs",
+        "target": "es5",
+        "removeComments": true,
+        "allowSyntheticDefaultImports": false,
+        "jsx": "react",
+        "outDir": "./distr/",
+        "lib": ["es2015", "es2017", "dom"],
+        "typeRoots": [
+            "node_modules/@types",
+            "client/node_modules/@types"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "Components/*": ["src/components/*"],
+			"Containers/*": ["src/containers/*"],
+            "Styles/*": ["src/styles/*"],
+            "Api/*": ["src/api/*"],
+        }
+    },
+    "include": [
+        "./src/**/**/*"
+    ],
+    "exclude": [
+        "node_modules", "distr", "jest", "client/node_modules"
+    ]
+}

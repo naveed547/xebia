@@ -1,0 +1,28 @@
+.article-table {
+    .article {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        &-image {
+            border-radius: 50%;
+            min-width: 30px;
+            min-height: 30px;
+            background: grey;
+        }
+        &-content {
+           color: black;
+           padding: 0 20px;
+           flex-grow: 1;
+        }
+        &-from {
+            display: flex;
+            opacity: 0.5;
+            span {
+                margin-bottom: 15px;
+                &.by {
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+}
