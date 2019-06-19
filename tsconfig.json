@@ -19,13 +19,13 @@
             "Components/*": ["src/components/*"],
 			"Containers/*": ["src/containers/*"],
             "Styles/*": ["src/styles/*"],
-            "Api/*": ["src/api/*"],
+            "Api/*": ["src/api/*"]
         }
     },
     "include": [
         "./src/**/**/*"
     ],
     "exclude": [
-        "node_modules", "distr", "jest", "client/node_modules"
+        "node_modules", "distr", "jest", "client/node_modules", "src/**/*.spec.ts", "src/**/*.spec.tsx"
     ]
 }

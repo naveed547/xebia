@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader Component Loader Component renders correctly using snapshots 1`] = `
+<div
+  className="site-loader"
+>
+  <div
+    className="loader-img"
+  >
+    <svg
+      enableBackground="new 0 0 0 0"
+      viewBox="0 0 100 100"
+      x="0px"
+      y="0px"
+    >
+      <circle
+        cx="6"
+        cy="50"
+        fill="#1b8dff"
+        r="6"
+        stroke="none"
+      >
+        <animateTransform
+          attributeName="transform"
+          begin="0.1"
+          dur="1s"
+          repeatCount="indefinite"
+          type="translate"
+          values="0 25 ; 0 -25; 0 25"
+        />
+      </circle>
+      <circle
+        cx="34"
+        cy="50"
+        fill="#ffd800"
+        r="6"
+        stroke="none"
+      >
+        <animateTransform
+          attributeName="transform"
+          begin="0.2"
+          dur="1s"
+          repeatCount="indefinite"
+          type="translate"
+          values="0 20 ; 0 -20; 0 20"
+        />
+      </circle>
+      <circle
+        cx="64"
+        cy="50"
+        fill="#08bd08"
+        r="6"
+        stroke="none"
+      >
+        <animateTransform
+          attributeName="transform"
+          begin="0.3"
+          dur="1s"
+          repeatCount="indefinite"
+          type="translate"
+          values="0 15 ; 0 -15; 0 15"
+        />
+      </circle>
+      <circle
+        cx="94"
+        cy="50"
+        fill="#ff0000"
+        r="6"
+        stroke="none"
+      >
+        <animateTransform
+          attributeName="transform"
+          begin="0.4"
+          dur="1s"
+          repeatCount="indefinite"
+          type="translate"
+          values="0 10 ; 0 -10; 0 10"
+        />
+      </circle>
+    </svg>
+  </div>
+  <div
+    className="loader-text"
+  >
+    ...Loading
+  </div>
+</div>
+`;
