@@ -4,7 +4,8 @@
         "exclude": [
             "node_modules/",
             "server/",
-            "distr/"
+            "distr/",
+            "jest/"
         ]
     },
     "rules": {
