@@ -104,12 +104,10 @@ class Pagination extends React.PureComponent<PaginationProps, PaginationState> {
 
     public render() {
         const pager = this.state.pager;
-
         if (!pager.pages || pager.pages.length <= 1) {
             // don't display pager if there is only 1 page
             return null;
         }
-
         return (
             <nav aria-label="Page navigation example">
                 <ul className="pagination justify-content-center">
