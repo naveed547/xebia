@@ -12,13 +12,19 @@ describe("List Component", () => {
 
     beforeEach(() => {
         wrapper = shallow(
-            <BrowserRouter>
+            // <BrowserRouter>
                 <ListTable {...cProps} />
-            </BrowserRouter>,
+            // </BrowserRouter>,
         );
     });
 
     it("List Component renders correctly", () => {
         expect(wrapper.children().length).not.toBeLessThan(1);
+    });
+
+    it("Validate truncString method", () => {
+        const testString = 'I am from test case';
+        const returnStr = wrapper.instance().truncString(testString);
+        expect(returnStr).toBe(testString)
     });
 });

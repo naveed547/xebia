@@ -11,8 +11,8 @@ class ListDetail extends React.PureComponent<ListDetailProps, ListDetailState> {
 	}
 	public render() {
 		const { item } = this.props;
-		const imgSrc = item.multimedia[0] && item.multimedia[0].url ? ('https://static01.nyt.com/' + item.multimedia[0].url) : '';
-		return (
+		const imgSrc = item.multimedia && item.multimedia[0] && item.multimedia[0].url ? ('https://static01.nyt.com/' + item.multimedia[0].url) : '';
+		return item && (
 			<React.Fragment>
 				<div className="article">
 					<div className="article-description">

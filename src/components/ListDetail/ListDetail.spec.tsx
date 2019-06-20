@@ -7,14 +7,24 @@ import ListDetail from "./ListDetail";
 describe("List Component", () => {
     let wrapper, mountwrap;
     const cProps = {
-        item: [],
+        item: {
+            headline: {
+                main: "heading",
+            },
+            lead_paragraph: "para",
+            byline: {
+                original: 'naveed'
+            },
+            pub_date: '22-03-2019T00:23:34',
+            multimedia: [{
+                url: ''
+            }]
+        },
     };
 
     beforeEach(() => {
         wrapper = shallow(
-            <BrowserRouter>
-                <ListDetail {...cProps} />
-            </BrowserRouter>,
+            <ListDetail {...cProps} />
         );
     });
 
